@@ -7,7 +7,7 @@ for (let i = 0; i <numberOfProcesses; i++) {
     console.log(processes[i]);
 }
 
-let WT = [0,];
+let WT = [0];
 let sumWT = 0;
 
 for (let i = 0; i <=numberOfProcesses ; i++) {
@@ -19,3 +19,6 @@ for (let i = 0; i <=numberOfProcesses ; i++) {
 let avrWT = sumWT/numberOfProcesses;
 console.log(avrWT);
 
+let processesSorted = processes.sort((number1, number2)=>number1 - number2);
+
+console.log(processesSorted);
