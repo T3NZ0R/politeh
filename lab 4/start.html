@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+<script>
+
+    document.body.style.display = 'flex';
+    document.body.style.justifyContent = 'center';
+    document.body.style.background = '#f3c25f';
+
+
+
+    let button = document.createElement('button');
+    button.style.marginTop = '300px';
+    button.style.padding = '50px';
+    button.style.paddingLeft = '100px';
+    button.style.paddingRight = '100px';
+    button.style.background = '#58ff58';
+
+    let link = document.createElement('a');
+    link.href = './index.html';
+    link.innerText = 'Start';
+    link.style.fontSize = '40px';
+    link.style.textDecoration = 'none';
+
+
+    button.append(link);
+    document.body.append(button);
+
+
+    button.onclick = () => {
+        let pageNum = 'page_number';
+        let currentPage = 1;
+        localStorage.setItem(pageNum, JSON.stringify(currentPage));
+
+    }
+
+</script>
+</body>
+</html>
